@@ -1,0 +1,21 @@
+# .NET build output
+**/bin/
+**/obj/
+
+# Test and coverage output
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# IDE metadata and user-specific settings
+.vs/
+.idea/
+*.user
+*.suo
+*.DotSettings.user
+
+# Local tooling and operating-system files
+.vscode/
+.DS_Store
+Thumbs.db
