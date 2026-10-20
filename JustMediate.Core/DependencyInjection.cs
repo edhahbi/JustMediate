@@ -8,7 +8,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddDispatcher(this IServiceCollection services, Assembly assembly)
     {
-        var requestWrappers = new Dictionary<Type, IRequestHandlerBase>();
+        var requestWrappers = new Dictionary<Type, RequestHandlerBase>();
 
         // search for all type in the assembly
         foreach (var type in assembly.GetTypes())
@@ -32,7 +32,7 @@ public static class DependencyInjection
 
                 if (requestWrappers.ContainsKey(requestType)) continue;
                 var wrapperType = typeof(RequestHandlerWrapper<,>).MakeGenericType(requestType, responseType);
-                requestWrappers[requestType] = (IRequestHandlerBase)Activator.CreateInstance(wrapperType)!;
+                requestWrappers[requestType] = (RequestHandlerBase)Activator.CreateInstance(wrapperType)!;
             }
         }
 

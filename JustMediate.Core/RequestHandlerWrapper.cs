@@ -2,20 +2,20 @@ using Microsoft.Extensions.DependencyInjection;
 
 namespace JustMediate;
 
-internal interface IRequestHandlerBase;
+internal abstract class RequestHandlerBase;
 
-internal interface IRequestHandlerBase<TResponse> : IRequestHandlerBase
+internal abstract class RequestHandlerBase<TResponse> : RequestHandlerBase
 {
-    internal ValueTask<TResponse> HandleAsync(
+    internal abstract ValueTask<TResponse> HandleAsync(
         IRequest<TResponse> request,
         IServiceProvider provider,
         CancellationToken ct);
 }
 
-internal sealed class RequestHandlerWrapper<TRequest,TResponse> : IRequestHandlerBase<TResponse>
+internal sealed class RequestHandlerWrapper<TRequest,TResponse> : RequestHandlerBase<TResponse>
     where TRequest : IRequest<TResponse>
 {
-    public ValueTask<TResponse> HandleAsync(
+    internal override ValueTask<TResponse> HandleAsync(
         IRequest<TResponse> request,
         IServiceProvider provider,
         CancellationToken ct)

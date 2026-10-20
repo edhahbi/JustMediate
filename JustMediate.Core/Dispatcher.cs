@@ -11,11 +11,11 @@ internal sealed class Dispatcher(IServiceProvider provider, DispatcherRegistry r
         
         return !registry.RequestWrappers.TryGetValue(request.GetType(), out var wrapper) 
             ? throw new ValidationException($"No handler is registered for request type {request.GetType().FullName}") 
-            : ((IRequestHandlerBase<TResponse>)wrapper).HandleAsync(request, provider, ct);
+            : ((RequestHandlerBase<TResponse>)wrapper).HandleAsync(request, provider, ct);
     }
 }
 
-internal class DispatcherRegistry(FrozenDictionary<Type, IRequestHandlerBase> registry)
+internal class DispatcherRegistry(FrozenDictionary<Type, RequestHandlerBase> registry)
 {
-    internal FrozenDictionary<Type, IRequestHandlerBase> RequestWrappers { get; } = registry;
+    internal FrozenDictionary<Type, RequestHandlerBase> RequestWrappers { get; } = registry;
 }
