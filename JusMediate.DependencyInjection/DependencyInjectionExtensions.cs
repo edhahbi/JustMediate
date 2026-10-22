@@ -1,10 +1,11 @@
 using System.Collections.Frozen;
 using System.Reflection;
+using JustMediate;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace JustMediate;
+namespace JusMedaite.DependencyInjectionAbstractions;
 
-public static class DependencyInjection
+public static class DependencyInjectionExtensions
 {
     public static IServiceCollection AddDispatcher(this IServiceCollection services, Assembly assembly)
     {

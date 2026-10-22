@@ -44,9 +44,3 @@ var sender = provider.GetRequiredService<ISender>();
 var greeting = await sender.Send(new GetGreeting("world"), CancellationToken.None);
 Console.WriteLine(greeting);
 ```
-
-Register pipeline behaviors with `AddPipelineBehavior`, then run the test suite with:
-
-```bash
-dotnet test
-```
