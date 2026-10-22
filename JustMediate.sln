@@ -2,8 +2,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMediate.Core", "JustMediate.Core\JustMediate.Core.csproj", "{A1DB2D52-0855-4207-A400-AA7FC3AB8889}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JustMediate.Tests", "JustMediate.Tests\JustMediate.Tests.csproj", "{FD3DAC54-F7F1-4B5A-A54F-0EDD8682D704}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,9 +12,5 @@ Global
 		{A1DB2D52-0855-4207-A400-AA7FC3AB8889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A1DB2D52-0855-4207-A400-AA7FC3AB8889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A1DB2D52-0855-4207-A400-AA7FC3AB8889}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FD3DAC54-F7F1-4B5A-A54F-0EDD8682D704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FD3DAC54-F7F1-4B5A-A54F-0EDD8682D704}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FD3DAC54-F7F1-4B5A-A54F-0EDD8682D704}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FD3DAC54-F7F1-4B5A-A54F-0EDD8682D704}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
